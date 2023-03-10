@@ -4,7 +4,7 @@ import openai
 from flask import Flask, redirect, render_template, request, url_for
 
 app = Flask(__name__)
-openai.api_key = "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"
+openai.api_key = "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"
 #print(openai.Model.list())
 """
             messages=[
@@ -39,4 +39,4 @@ def generate_prompt(animal):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0", port=3389)
