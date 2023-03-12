@@ -4,7 +4,8 @@ import openai
 from flask import Flask, redirect, render_template, request, url_for
 
 app = Flask(__name__)
-openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
+#print(openai.api_key)
 #print(openai.Model.list())
 """
             messages=[
