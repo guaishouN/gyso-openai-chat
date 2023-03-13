@@ -16,6 +16,8 @@
     <input type="submit" value="Send" />
   </form>
   {% if result %}
-  <div class="result">{{ result }}</div>
+  <div class="result">
+    <p style="white-space: pre-wrap;">{{ result|safe }}{{'\n'}}</p>
+  </div>
   {% endif %}
 </body>
