@@ -49,6 +49,13 @@ def index():
         return redirect(url_for("index"))
     return render_template("index.html", result=tmpContent)
 
+@app.route("/chatdemo", methods=("GET", "POST"))
+def chatdemo():
+    return render_template("chat_app.html")
+
+@app.route("/chatgpt", methods=("GET", "POST"))
+def chatgpt():
+    return render_template("chattmp.html")
 
 def generate_prompt(animal):
     messages[0]["content"] = animal.capitalize()
